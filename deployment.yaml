@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
+  annotations: null
   labels:
     app: spring-petclinic
     app.kubernetes.io/component: web
@@ -21,9 +21,8 @@ spec:
         app: spring-petclinic
     spec:
       containers:
-      - name: spring-petclinic
+      - image: quay.io/siamaksade/spring-petclinic:e972fbad0ab20b4519f82974609880e713afc02a
         imagePullPolicy: Always
-        image: quay.io/siamaksade/spring-petclinic:latest
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -34,6 +33,7 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
+        name: spring-petclinic
         ports:
         - containerPort: 8080
           protocol: TCP
