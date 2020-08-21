@@ -21,7 +21,7 @@ spec:
         app: spring-petclinic
     spec:
       containers:
-      - image: quay.io/siamaksade/spring-petclinic:1c2c526ec462a2a704a7a34bc64ab3372aaaf3c2
+      - image: quay.io/siamaksade/spring-petclinic:a2bc02c9b8a8f7bc2ef107a29bcf88d161f0b85f
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
