@@ -2,3 +2,9 @@ resources:
 - deployment.yaml
 - service.yaml
 - route.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- digest: sha256:dfe430fd09524595422536ed8206fee4e54bc9bf58c22fdc6c6ee558006dc0f8
+  name: quay.io/praveenrachamreddy/ci-pipeline
+  newName: 1.1-SNAPSHOT
